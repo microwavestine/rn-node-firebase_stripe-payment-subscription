@@ -1,0 +1,51 @@
+<script src="https://js.stripe.com/v3/"></script>
+<link rel="stylesheet" type="text/css" href="css/donation.css" data-rel-css="" />
+
+
+<div class="thankyou">
+    <h1>You are donating <%-donation_amount %> HKD to </h1>
+</div>
+<form action="/donate" method="post" id="payment-form">
+    <input type="hidden" name="userID" value=<%=user_id %> />
+    <input type="hidden" name="donation" value=<%=donation_amount %> />
+  <fieldset>
+      <legend align="center">Enter card details</legend>
+      <div class="form-row">
+          <label for="name-element">
+            Name
+          </label>
+          <div id="name-element">
+            <input type="text" placeholder="John Doe">
+          </div>
+      
+          <!-- Used to display form errors. -->
+          <div id="name-errors" role="alert"></div>
+      </div>
+      <div class="form-row">
+          <label for="email-element">
+            Email
+          </label>
+          <div id="email-element">
+              <input type="text" placeholder="johndoe@.com">
+          </div>
+      
+          <!-- Used to display form errors. -->
+          <div id="name-errors" role="alert"></div>
+      </div>
+        <div class="form-row">
+            <label for="card-element">
+              Card
+            </label>
+            <div id="card-element">
+              <!-- A Stripe Element will be inserted here. -->
+            </div>
+        
+            <!-- Used to display form errors. -->
+            <div id="card-errors" role="alert"></div>
+        </div>
+          <button>Donate</button>
+  </fieldset>
+
+</form>
+
+<script src="js/donation.js" data-rel-js></script>

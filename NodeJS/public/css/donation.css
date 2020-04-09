@@ -1,0 +1,189 @@
+
+body, html {
+  height: 100%;
+  background-color: #f7f8f9;
+  color: #6b7c93;
+}
+
+*, label {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  font-variant: normal;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.thankyou {
+  text-align: center;
+  margin: 4%;
+}
+
+h1 {
+  font-size: 40px;
+}
+#logo {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+}
+legend {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+button {
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  text-decoration: none;
+  color: #fff;
+  background: #267CB2;
+  white-space: nowrap;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 14px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  -webkit-transition: all 150ms ease;
+  transition: all 150ms ease;
+  float: left;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, .10), 0 3px 6px rgba(0, 0, 0, .08);
+  background-color: #66BCF2;
+}
+
+form {
+  padding: 30px;
+  height: 120px;
+  align-content: 'center';
+  align-self: 'center';
+  align-items: 'center';
+}
+
+label {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+fieldset {
+  padding: 20px;
+  width: 50%;
+  align-items: center;
+  margin:auto;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  
+}
+
+#card-errors {
+  height: 20px;
+  padding: 4px 0;
+  color: #fa755a;
+}
+
+.form-row {
+  width: 100%;
+  align-content: 'center';
+  align-self: 'center';
+  align-items: 'center';
+}
+
+::placeholder {
+  color: #b0bac6;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: #b0bac6;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: #b0bac6;
+}
+input {
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  margin-bottom: 2%;
+  background: transparent;
+  border-top: transparent !important;
+  border-left: transparent !important;
+  border-right: transparent !important;
+  border-bottom: 1px solid !important;
+  color: black;
+  padding-left: 0;
+  outline: none;
+}
+.token {
+  color: #32325d;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 500;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+#stripe-token-handler {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  padding: 20px 30px;
+  border-radius: 0 0 4px 4px;
+  box-sizing: border-box;
+  box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1),
+    0 15px 35px rgba(50, 50, 93, 0.15),
+    0 5px 15px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  transform: translateY(0);
+  opacity: 1;
+  background-color: white;
+}
+
+#stripe-token-handler.is-hidden {
+  opacity: 0;
+  transform: translateY(-80px);
+}
+
+/**
+ * The CSS shown here will not be introduced in the Quickstart guide, but shows
+ * how you can use CSS to style your Element's container.
+ */
+.StripeElement {
+  width: 100%;
+  color: #fff;
+  background: transparent;
+  padding: 5px 0 6px 0;
+  border-bottom: 1px solid #000;
+  transition: border-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}

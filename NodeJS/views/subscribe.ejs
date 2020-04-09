@@ -1,0 +1,16 @@
+<div class="form-header">
+    <h2>Subscribe</h2>
+</div>
+  <form action="/subscribe" method="post">
+    <input type="hidden" name="userID" value=<%=user_id %> />
+    <script
+        src="https://checkout.stripe.com/checkout.js"
+        class= "stripe-button"
+        data-key='<%= process.env.STRIPE_PUB_KEY %>'
+        data-amount="3000"
+        data-name="Premium Subscription Plan"
+        data-locale="auto"
+        data-currency="hkd"
+    >
+    </script>
+  </form>
